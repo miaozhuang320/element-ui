@@ -1,6 +1,6 @@
 {
   "name": "@shinhotech/sh-ui",
-  "version": "2.15.1",
+  "version": "2.15.5",
   "description": "A Component Library for Vue.js.",
   "main": "lib/@shinhotech/sh-ui.common.js",
   "files": [
