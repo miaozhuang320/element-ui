@@ -1,6 +1,6 @@
 {
   "name": "@shinhotech/sh-ui",
-  "version": "2.15.5",
+  "version": "2.15.6",
   "description": "A Component Library for Vue.js.",
   "main": "lib/@shinhotech/sh-ui.common.js",
   "files": [
@@ -47,6 +47,9 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/shinhotech/element.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/shinhotech"
   },
   "homepage": "http://element.eleme.io",
   "keywords": [
