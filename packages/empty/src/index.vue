@@ -1,3 +1,10 @@
+<!--
+ * @Descripttion: 
+ * @Author: 18041085
+ * @Date: 2021-08-24 11:08:31
+ * @LastEditors: 18041085
+ * @LastEditTime: 2021-08-24 11:17:49
+-->
 <template>
   <div class="el-empty">
     <div class="el-empty__image" :style="imageStyle">
@@ -18,7 +25,7 @@
 
 <script>
 import ImgEmpty from './img-empty.vue';
-import { t } from 'element-ui/src/locale';
+import { t } from '@shinhotech/sh-ui/src/locale';
 
 export default {
   name: 'ElEmpty',

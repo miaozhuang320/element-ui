@@ -1,15 +1,15 @@
 /*
- * @Descripttion: 
+ * @Descripttion: zhu
  * @Author: 18041085
  * @Date: 2021-08-24 10:35:02
  * @LastEditors: 18041085
- * @LastEditTime: 2021-08-24 10:53:31
+ * @LastEditTime: 2021-08-24 11:15:37
  */
 import Vue from 'vue';
 import Main from './main.vue';
-import { PopupManager } from 'element-ui/src/utils/popup';
-import { isVNode } from 'element-ui/src/utils/vdom';
-import { isObject } from 'element-ui/src/utils/types';
+import { PopupManager } from '@shinhotech/sh-ui/src/utils/popup';
+import { isVNode } from '@shinhotech/sh-ui/src/utils/vdom';
+import { isObject } from '@shinhotech/sh-ui/src/utils/types';
 let MessageConstructor = Vue.extend(Main);
 
 let instance;
