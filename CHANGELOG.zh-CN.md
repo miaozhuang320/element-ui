@@ -1,12 +1,14 @@
 ## 更新日志
 
 ### 私有更新
+#### Update
 
-*2021-01-20*
+- Drawer(2021-09-23)
+  - 添加收起按钮
 
 #### Add
 
-- DatePicker
+- DatePicker(2021-01-20)
   - 添加type为quarter的季度选择
 ### 2.15.6
 
