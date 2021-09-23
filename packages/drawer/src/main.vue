@@ -40,6 +40,14 @@
           <section class="el-drawer__body" v-if="rendered">
             <slot></slot>
           </section>
+          <div
+            class="el-dialog__close-button"
+            :style="backStyle"
+            @click="closeDrawer">
+            <slot name="visible-button">
+              <span v-if="visbleButton" class="el-dialog__icon el-icon-arrow-right"></span>
+            </slot>
+          </div>
         </div>
       </div>
     </div>
@@ -110,6 +118,10 @@ export default {
     withHeader: {
       type: Boolean,
       default: true
+    },
+    visbleButton: {
+      type: Boolean,
+      default: false
     }
   },
   computed: {
@@ -118,6 +130,24 @@ export default {
     },
     drawerSize() {
       return typeof this.size === 'number' ? `${this.size}px` : this.size;
+    },
+    backStyle() {
+      let backStyle = {};
+      switch (this.direction) {
+        case 'rtl':
+          backStyle = {left: '-15px', right: 'unset'};
+          break;
+        case 'ltr':
+          backStyle = {right: '-15px', left: 'unset', transform: 'Rotate(180deg)'};
+          break;
+        case 'ttb':
+          backStyle = {right: '50%', left: 'unset', top: 'unset', bottom: '-25px', transform: 'Rotate(-90deg)'};
+          break;
+        case 'btt':
+          backStyle = {right: '50%', left: 'unset', top: '-25px', bottom: 'unset', transform: 'Rotate(90deg)'};
+          break;
+      }
+      return backStyle;
     }
   },
   data() {
@@ -190,6 +220,9 @@ export default {
     if (this.visible) {
       this.rendered = true;
       this.open();
+      if (this.appendToBody) {
+        document.body.appendChild(this.$el);
+      }
     }
   },
   destroyed() {

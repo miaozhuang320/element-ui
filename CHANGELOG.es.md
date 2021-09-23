@@ -1,8 +1,11 @@
 ## Changelog
 
-### Private update
-
-*2021-01-20*
+### 2.15.7 - shinho
+*2021-09-23*
+#### Update
+- Drawer
+  - 添加收起按钮
+- 同步element-ui@2.15.6
 
 #### Add
 
@@ -10,24 +13,43 @@
   - 添加type为quarter的季度选择
 ### 2.15.6
 
+*2021-09-02*
+
+#### Bug fixes
+
+- Cascader
+  - fix a bug that makes the browser jitter in zoom mode (#21207 by @cs1707)
+  - optimize performance (#21231 by @cs1707)
+- Select
+  - fix long text overflow in multiple mode (#21237 by @cs1707)
+- Dropdown
+  - add disabled property (#21235 by @mshioda)
+- Radio
+  - fix checked state when browser go back (#21250 by @cs1707)
+- Descriptions
+  - fix type declaration (#21265 by @adaex)
+  - avoid table style conflict (#21254 by @adaex)
+- Drawer
+  - fix append to body (#21264 by @cs1707)
+- Local
+  - fix italian mistake (#21012 by @ricardotondello)
+
+### 2.15.6 - shinho
+
 *2021-08-24*
 
 #### Bug 修复
 - 导出组件
   - 修复组件库未导出完整包的问题
 
-#### 新特性
+#### UpDate
 - 更新包
   - 同步更新/维护最新组件库
-
-#### Add
-
-- DatePicker
-  - add type quarter
-
 ### 2.15.5
 
 *2021-08-04*
+
+#### Bug fixes
 
 - Select
   - fix resetInputHeight (#21201 by @cs1707)
@@ -138,6 +160,15 @@
 
 - Doc
   - update Axure resource v2.1.0 (by @iamkun)
+
+### 2.15.1 - shinho
+
+*2021-01-20*
+
+#### Add
+
+- DatePicker(2021-01-20)
+  - 添加type为quarter的季度选择
 ### 2.15.0
 
 *2021-01-15*
