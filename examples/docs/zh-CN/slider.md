@@ -10,6 +10,16 @@
 ```html
 <template>
   <div class="block">
+    <span class="demonstration">滑块单选多选</span>
+    <el-plate
+      class="el-slider"
+      :moduleArr="tabType"
+      :defaultCheck="defaultCheck"
+      @plate-change="plateChange"
+    >
+    </el-plate>
+  </div>
+  <div class="block">
     <span class="demonstration">默认</span>
     <el-slider v-model="value1"></el-slider>
   </div>
@@ -39,12 +49,28 @@
         value2: 50,
         value3: 36,
         value4: 48,
-        value5: 42
+        value5: 42,
+        tabType: [
+          { name: '全部', key: '333',
+            hasChild:
+              [
+                { name: '全部1', key: '1' },
+                { name: '全部2', key: '2' }
+              ]
+          },
+          { name: '苹果', key: 'pingguo'},
+          { name: '香蕉', key: 'xiangjiao' }
+        ],
+        defaultCheck: [{ name: '苹果', key: 'pingguo' }]
+
       }
     },
     methods: {
       formatTooltip(val) {
         return val / 100;
+      },
+      plateChange (item) {
+        console.log('切换', item)
       }
     }
   }
@@ -54,7 +80,7 @@
 
 ### 离散值
 
-选项可以是离散的
+选项可以是离散的1123
 
 :::demo 改变`step`的值可以改变步长，通过设置`show-stops`属性可以显示间断点
 ```html

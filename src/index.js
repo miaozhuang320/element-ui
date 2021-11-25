@@ -90,6 +90,7 @@ import DescriptionsItem from '../packages/descriptions-item/index.js';
 import Result from '../packages/result/index.js';
 import locale from '@shinhotech/sh-ui/src/locale';
 import CollapseTransition from '@shinhotech/sh-ui/src/transitions/collapse-transition';
+import Plate from '../packages/plate-tab/index.js';
 
 const components = [
   Pagination,
@@ -175,7 +176,8 @@ const components = [
   Descriptions,
   DescriptionsItem,
   Result,
-  CollapseTransition
+  CollapseTransition,
+  Plate
 ];
 
 const install = function(Vue, opts = {}) {
